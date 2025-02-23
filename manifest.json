@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Infinite Tabs",
+  "version": "1.0",
+  "description": "Effortlessly save and organize your browser tabs",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/logo-16.png",
+      "48": "assets/logo-48.png",
+      "128": "assets/logo-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/logo-16.png",
+    "48": "assets/logo-48.png",
+    "128": "assets/logo-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "commands": {
+    "store-current-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      },
+      "description": "Store current tab"
+    }
+  }
+}

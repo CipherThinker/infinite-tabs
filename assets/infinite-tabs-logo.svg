@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <circle cx="64" cy="64" r="60" fill="url(#paint0_linear)"/>
+  
+  <!-- Infinity symbol -->
+  <path d="M40 64C40 55.2 47.2 48 56 48C64.8 48 72 55.2 72 64C72 72.8 64.8 80 56 80C47.2 80 40 72.8 40 64ZM88 48C79.2 48 72 55.2 72 64C72 72.8 79.2 80 88 80C96.8 80 104 72.8 104 64C104 55.2 96.8 48 88 48Z" fill="white"/>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF1B6B"/>
+      <stop offset="50%" stop-color="#FF758C"/>
+      <stop offset="100%" stop-color="#45CAFF"/>
+    </linearGradient>
+  </defs>
+</svg>

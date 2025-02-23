@@ -1,0 +1,94 @@
+/* Transfer animation effect */
+.infinite-tabs-transfer-effect {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: linear-gradient(90deg, #FF1B6B, #45CAFF);
+  animation: transferEffect 1s ease-out forwards;
+  z-index: 999999;
+}
+
+@keyframes transferEffect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Success indicator */
+.infinite-tabs-success-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #FF1B6B, #45CAFF);
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeInOut 1s ease-in-out;
+  z-index: 999999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Styles for links when Ctrl+Shift is pressed */
+.infinite-tabs-success {
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, rgba(69, 202, 255, 0.2), rgba(255, 27, 107, 0.2)) !important;
+  border-radius: 4px;
+}
+
+/* Success animation */
+.infinite-tabs-success {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #00ff87, #60efff);
+  color: #1a1a1a;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  z-index: 999999;
+  animation: slideIn 0.3s ease-out forwards;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.infinite-tabs-success::before {
+  content: '✓ Tab Saved';
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation dot */
+.infinite-tabs-animation-dot {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #FF1B6B, #45CAFF);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
