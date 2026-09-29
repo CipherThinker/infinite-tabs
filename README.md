@@ -67,3 +67,8 @@ Test the following scenarios:
 ## License
 
 MIT License
+## Local development
+
+1. Clone this repository onto your computer.
+2. Open the project folder in your code editor.
+3. Review manifest.json to identify the extension's entry points.
